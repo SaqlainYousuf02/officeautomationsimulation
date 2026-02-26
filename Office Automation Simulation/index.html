@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Automation Simulation - Aptech Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Office Automation Simulation</h1>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalStudents">0</div>
+                <div class="stat-label">Total Students</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalCourses">0</div>
+                <div class="stat-label">Courses</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="avgGrade">0%</div>
+                <div class="stat-label">Avg Grade</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="activeCount">0</div>
+                <div class="stat-label">Active</div>
+            </div>
+        </div>
+
+        <div class="data-preview">
+            <h3 class="section-title">Student Records Preview</h3>
+            <table id="previewTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Student Name</th>
+                        <th>Course</th>
+                        <th>Instructor</th>
+                        <th>Grade</th>
+                        <th>Status</th>
+                        <th>Enrollment Date</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="export-section">
+            <button class="export-btn" onclick="exportToExcel()">
+                <span>📥</span>
+                <span id="btnText">Export to Excel</span>
+            </button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
